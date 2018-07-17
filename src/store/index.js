@@ -6,7 +6,9 @@ import counter from './modules/counter'
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
-  ...counter,
+  modules: {
+    counter
+  },
   plugins: [
     // 数据持久化
     createPersistedState({
@@ -19,9 +21,4 @@ const store = new Vuex.Store({
   ]
 })
 
-// export default store
-export default {
-  install: function (Vue, name = 'store') {
-    Object.defineProperty(Vue.prototype, name, { value: store })
-  }
-}
+export default store

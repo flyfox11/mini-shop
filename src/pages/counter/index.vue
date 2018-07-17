@@ -6,24 +6,27 @@
       <button @click="decrement">-</button>
     </p>
 
-    <a href="/pages/index/main" class="home">去往首页</a>
+    <a href="/pages/index/main" class="home">{{test}}去往首页</a>
   </div>
 </template>
 
 <script>
-
+import { mapGetters } from 'vuex'
 export default {
   computed: {
-    count () {
-      return this.store.getters.getCount
+    ...mapGetters({
+      count: 'getCount'
+    }),
+    test: function () {
+      return 'testtest'
     }
   },
   methods: {
     increment () {
-      this.store.dispatch('COUNTER_INCREMENT')
+      this.$store.dispatch('COUNTER_INCREMENT')
     },
     decrement () {
-      this.store.dispatch('COUNTER_DECREMENT')
+      this.$store.dispatch('COUNTER_DECREMENT')
     }
   }
 }

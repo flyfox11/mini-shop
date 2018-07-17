@@ -5,7 +5,7 @@ import store from '@/store'
 Vue.config.productionTip = false
 App.mpType = 'app'
 Vue.use(http)
-Vue.use(store)
+Vue.prototype.$store = store
 const app = new Vue(App)
 app.$mount()
 
