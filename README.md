@@ -31,7 +31,6 @@
 	|-- package.json                     // 项目及工具的依赖配置文件
 	|-- project.config.json              // 小程序相关的项目配置
 	|-- README.md                        // 说明
-  |-- .eslintignore                    // 代码检查忽略配置
 	|-- .eslintrc.js                     // 检查配置文件
   |-- package-lock.json                // 项目固定依赖配置文件
 
