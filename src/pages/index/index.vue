@@ -24,7 +24,7 @@
 
 <script>
 import card from '@/components/card'
-
+import { mapGetters } from 'vuex'
 export default {
   data () {
     return {
@@ -32,7 +32,11 @@ export default {
       userInfo: {}
     }
   },
-
+  computed: {
+    ...mapGetters({
+      test: 'getTest'
+    })
+  },
   components: {
     card
   },
@@ -58,7 +62,10 @@ export default {
   created () {
     // 调用应用实例的方法获取全局数据
     this.getUserInfo()
-    console.log('log:', this.$http, this.$store)
+    this.$store.dispatch('TEST_GET')
+    wx.setNavigationBarTitle({
+      title: this.test
+    })
   }
 }
 </script>
