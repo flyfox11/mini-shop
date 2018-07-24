@@ -24,6 +24,7 @@
 	|-- static                           // 静态资源文件
 	|-- .babelrc                         // ES6语法编译配置
 	|-- .editorconfig                    // 代码编写规格
+  |-- .eslintignore                    // 代码检查忽略配置
 	|-- .gitignore                       // git忽略的文件
 	|-- .postcssrc.js                    // post-loader的插件配置文件
 	|-- index.html                       // 入口html文件
