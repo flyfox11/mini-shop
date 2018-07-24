@@ -24,16 +24,12 @@
 	|-- static                           // 静态资源文件
 	|-- .babelrc                         // ES6语法编译配置
 	|-- .editorconfig                    // 代码编写规格
-  |-- .eslintignore                    // 代码检查忽略配置
-  |-- .eslintrc.js                     // 检查配置文件
 	|-- .gitignore                       // git忽略的文件
 	|-- .postcssrc.js                    // post-loader的插件配置文件
 	|-- index.html                       // 入口html文件
-  |-- package-lock.json                // 项目固定依赖配置文件
 	|-- package.json                     // 项目及工具的依赖配置文件
 	|-- project.config.json              // 小程序相关的项目配置
-	|-- README.md                        // 说明
-
+	|-- README.md                        // 说明文档
 
 ## 项目运行
 
