@@ -7,13 +7,16 @@
         <card :text="userInfo.nickName"></card>
       </div>
     </div>
-
     <div class="usermotto">
       <div class="user-motto">
         <card :text="motto"></card>
       </div>
     </div>
-
+    <div>这里是图标
+      <span class="icon-collect"></span>
+      <span class="icon-delivery"></span>
+      <span class="icon-payment"></span>
+    </div>
     <form class="form-container">
       <input type="text" class="form-control" v-model="motto" placeholder="v-model" />
       <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
@@ -48,7 +51,24 @@ export default {
         success: () => {
           wx.getUserInfo({
             success: (res) => {
+              console.log('授权成功！！')
               this.userInfo = res.userInfo
+            },
+            fail: () => {
+              wx.showModal({
+                title: '警告',
+                content: '尚未进行授权，请点击确定跳转到授权页面进行授权。',
+                success: function (res) {
+                  if (res.confirm) {
+                    wx.navigateTo({
+                      url: '../authorize/main'
+                    })
+                    console.log('用户点击确定')
+                  } else if (res.cancel) {
+                    console.log('用户点击取消')
+                  }
+                }
+              })
             }
           })
         }
