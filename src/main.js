@@ -19,6 +19,32 @@ export default {
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
+    },
+    tabBar: {
+      color: '#9a9a9a',
+      selectedColor: '#9a9a9a',
+      backgroundColor: '#ffffff',
+      borderStyle: 'white',
+      list: [{
+        pagePath: 'pages/index/main',
+        iconPath: '/static/images/ic_home.png',
+        selectedIconPath: '/static/images/ic_home_pre.png',
+        text: '首页'
+      },
+      {
+        pagePath: 'pages/counter/main',
+        iconPath: '/static/images/ic_me.png',
+        selectedIconPath: '/static/images/ic_me_pre.png',
+        text: '测试'
+      }
+      //             {
+      //                 pagePath: 'pages/cart',
+      //                 iconPath: '/static/images/ic_chart.png',
+      //                 selectedIconPath: '/static/images/ic_chart_pre.png',
+      //                 text: '购物车',
+      //                 comName: 'Cart'
+      //             },
+      ]
     }
   }
 }

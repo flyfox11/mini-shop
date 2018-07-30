@@ -6,7 +6,8 @@
       <button @click="decrement">-</button>
     </p>
 
-    <a href="/pages/index/main" class="home">{{test}}去往首页</a>
+    <!-- <a href="/pages/index/main" class="home">{{test}}去往首页</a> -->
+    <div class="home" @click="goToHome">{{test}}去往首页</div>
   </div>
 </template>
 
@@ -27,6 +28,11 @@ export default {
     },
     decrement () {
       this.$store.dispatch('COUNTER_DECREMENT')
+    },
+    goToHome () {
+      wx.switchTab({
+        url: '../index/main'
+      })
     }
   }
 }
